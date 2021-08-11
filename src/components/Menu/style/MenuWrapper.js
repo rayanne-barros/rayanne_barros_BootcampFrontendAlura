@@ -10,9 +10,9 @@ export const MenuWrapper = styled.nav`
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 38px;
-    background-color: ${({ theme }) => theme.theme.colors.primary};
-    color: ${({ theme }) => theme.theme.colors.primaryFont};
-    font-weight: 300;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryFont};
+    font-weight: 400;
     transition: 0.6s;
 
     ${breakpointsMedia({
@@ -38,7 +38,7 @@ ${breakpointsMedia({
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 16px;
+    font-size: 18px;
     `,
     lg: css`
     max-width: 1160px;
@@ -77,12 +77,12 @@ MenuWrapper.RightSide = styled.div`
     text-align: center;
     display: block;
     text-decoration: none;
-    color: ${({ theme }) => theme.theme.colors.primaryFont};
+    color: ${({ theme }) => theme.colors.primaryFont};
     transition: 200ms ease-in-out;    
     &:hover,
     &:focus {
       font-weight: 700;
-      color: ${({ theme }) => theme.theme.colors.primaryFont};
+      color: ${({ theme }) => theme.colors.primaryFont};
       
     }
   }

@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
  display: flex;
  align-items: center;
  justify-content: center;
- background-color: ${({ theme }) => theme.theme.colors.primary};
+ background-color: ${({ theme }) => theme.colors.primary};
  list-style: none;
  gap: 42px;
  ${breakpointsMedia({
@@ -21,10 +21,10 @@ const FooterWrapper = styled.footer`
     `,
   })};
  li{
-    background-color: ${({ theme }) => theme.theme.colors.primary};        
+    background-color: ${({ theme }) => theme.colors.primary};        
  }
  a {
-   color: ${({ theme }) => theme.theme.colors.primaryFont};
+   color: ${({ theme }) => theme.colors.primaryFont};
    text-decoration: none;
    transition: .3s;
    &:hover,
@@ -52,7 +52,7 @@ export default function Footer() {
     <Box
       marginTop={{
         xs: '50px',
-        md: '150px',
+        md: '130px',
       }}
     >
       <FooterWrapper>

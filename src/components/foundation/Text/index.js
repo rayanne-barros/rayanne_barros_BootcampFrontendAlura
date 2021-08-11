@@ -10,10 +10,10 @@ export const TextStyleVariantsMap = {
     line-height: ${({ theme }) => theme.typographyVariants.title.lineHeight};
     margin: 0;
   `,
-  titleXS: css`
-    font-size: ${({ theme }) => theme.typographyVariants.titleXS.fontSize};
+  titleXS: css`    
     font-weight: ${({ theme }) => theme.typographyVariants.titleXS.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.titleXS.lineHeight};
+    font-size: ${({ theme }) => theme.typographyVariants.titleXS.fontSize};
     margin: 0;
   `,
   subTitle: css`
@@ -41,7 +41,7 @@ export const TextStyleVariantsMap = {
 
 const TextBase = styled.span`
   ${({ variant }) => TextStyleVariantsMap[variant]}
-  color: ${({ theme }) => theme.theme.colors.primaryFont};
+  color: ${({ theme }) => theme.colors.primaryFont};
   ${propToStyle('marginBottom')}
   ${propToStyle('marginTop')}
   ${propToStyle('textAlign')}

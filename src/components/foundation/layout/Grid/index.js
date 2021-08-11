@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: auto;
   /* margin-right: auto;
   margin-left: auto; */
-  color: ${({ theme }) => theme.theme.colors.primaryFont};
+  color: ${({ theme }) => theme.colors.primaryFont};
 
   ${breakpointsMedia({
     sm: css`
@@ -47,7 +47,7 @@ const Col = styled.div`
   hr {
     max-width: 400px;
     min-width: 100px;
-    border: 3px solid ${({ theme }) => theme.theme.colors.primary};
+    border: 3px solid ${({ theme }) => theme.colors.primary};
     border-radius: 10px;
     margin: 42px 0;
   }

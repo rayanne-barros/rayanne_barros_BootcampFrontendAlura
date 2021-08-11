@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    background-color: ${({ theme }) => theme.theme.colors.secondary};
-    font-family: ${({ theme }) => theme.theme.fontFamily};
+    background-color: ${({ theme }) => theme.colors.secondary};
+    font-family: ${({ theme }) => theme.fontFamily};
     display: flex;
         min-height: 100vh;
         width: 100%;   
@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
     text-decoration: none;
-    color: ${({ theme }) => theme.theme.colors.primaryFont};
+    color: ${({ theme }) => theme.colors.primaryFont};
   }
     
     #__next {
