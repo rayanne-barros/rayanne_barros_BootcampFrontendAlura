@@ -5,6 +5,7 @@ import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 export const MenuWrapper = styled.nav`
     width: 100%;
     min-height: 10vh;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,7 +66,7 @@ MenuWrapper.RightSide = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   ${breakpointsMedia({
     md: css`

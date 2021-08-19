@@ -39,7 +39,7 @@ ProjetosWrapper.Destaque = styled.a`
     .img1{
         height: 150px;
         width: 100%;
-        background-image: url('/images/instaluraLandingPage.WebP');
+        background-image: url('/images/projeto-base.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
