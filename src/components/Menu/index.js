@@ -9,9 +9,9 @@ export default function Menu() {
           Rayanne Barros
         </MenuWrapper.LeftSide>
         <MenuWrapper.RightSide>
-          <a href="#about-me">Sobre mim</a>
+          <a href="/">Início</a>
+          <a href="/sobre">Sobre </a>
           <a href="#projetos">Projetos</a>
-          <a href="#contact">Contato</a>
         </MenuWrapper.RightSide>
       </MenuWrapper.Global>
     </MenuWrapper>
