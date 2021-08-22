@@ -26,19 +26,7 @@ export default function Projetos() {
         </ProjetosWrapper.Card>
         <ProjetosWrapper.Card href="https://github.com/rayanne-barros/Challenge_alura_frontend" target="_blank" rel="noopener noreferrer">
           <div className="img3" />
-          <Text tag="h3" variant="subTitle" color="primaryFont" textAlign="center">Challenge Alura Front-End</Text>
-        </ProjetosWrapper.Card>
-        <ProjetosWrapper.Card href="https://github.com/rayanne-barros/Desafio_To-do_list" target="_blank" rel="noopener noreferrer">
-          <div className="img4" />
-          <Text
-            tag="h3"
-            variant="subTitle"
-            color="primaryFont"
-            textAlign="center"
-            padding="20px"
-          >
-            To-do List
-          </Text>
+          <Text tag="h3" variant="subTitle" color="primaryFont" textAlign="center" padding="20px">Challenge Alura</Text>
         </ProjetosWrapper.Card>
       </ProjetosWrapper>
     </Box>

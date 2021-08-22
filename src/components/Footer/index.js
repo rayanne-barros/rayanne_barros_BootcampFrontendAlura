@@ -7,8 +7,8 @@ import { Box } from '../foundation/layout/Box';
 
 const FooterWrapper = styled.footer`
  width: 100%;
- min-height: 10vh;
- padding: 28px;
+ height: 63px;
+ padding: 20px;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -18,6 +18,7 @@ const FooterWrapper = styled.footer`
  ${breakpointsMedia({
     md: css`
       padding: 18px 28px;
+      height: 56px;
     `,
   })};
  li{
@@ -51,8 +52,8 @@ export default function Footer() {
   return (
     <Box
       marginTop={{
-        xs: '50px',
-        md: '130px',
+        xs: '40px',
+        md: '60px',
       }}
     >
       <FooterWrapper>

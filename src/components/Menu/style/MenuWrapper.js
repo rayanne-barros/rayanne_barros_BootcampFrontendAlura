@@ -10,7 +10,7 @@ export const MenuWrapper = styled.nav`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 38px;
+    padding: 20px;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.primaryFont};
     font-weight: 400;
@@ -18,7 +18,7 @@ export const MenuWrapper = styled.nav`
 
     ${breakpointsMedia({
     md: css`
-        padding: 18px 28px;
+        padding: 18px 28px;       
     `,
   })};
 `;
@@ -32,7 +32,7 @@ flex-wrap: wrap;
 ${breakpointsMedia({
     xs: css`
     width: 100%;
-    font-size: 14px;
+    font-size: 20px;
     `,
     md: css`
     width: 100%;
@@ -66,11 +66,12 @@ MenuWrapper.RightSide = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   ${breakpointsMedia({
     md: css`
       max-width: 480px;
+      justify-content: space-evenly;
     `,
   })}
    

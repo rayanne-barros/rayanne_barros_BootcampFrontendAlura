@@ -10,7 +10,7 @@ export const ProjetosWrapper = styled.div`
 
     ${breakpointsMedia({
     md: css`
-        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
         grid-template-rows: 300px 1fr;
         max-width: 900px;
         margin: 0 auto;
@@ -23,13 +23,13 @@ ProjetosWrapper.Destaque = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #91869e;
+    border: 1px solid #0862FF;
     &:hover {
-        box-shadow: 5px 5px 10px 5px rgba(145, 134, 158, 0.35);
+        box-shadow: 5px 5px 10px 5px #0542AB;
     }
     ${breakpointsMedia({
     md: css`
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         flex-direction: row;
         justify-items: center;
         align-items: center;
@@ -69,11 +69,11 @@ ProjetosWrapper.Card = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #91869e;
+    border: 1px solid #0862FF;
     width: 100%;
 
     &:hover {
-        box-shadow: 5px 5px 10px 5px rgba(145, 134, 158, 0.35);
+        box-shadow: 5px 5px 10px 5px #0542AB;
     }
 
     .img2, .img3, .img4 {
@@ -89,7 +89,7 @@ ProjetosWrapper.Card = styled.a`
   })}
     }
     .img2{
-        background-image: url('/images/alurakut1.png');
+        background-image: url('/images/alurakut.png');
     }
     .img3{
         background-image: url('/images/challenge_alura.png');
