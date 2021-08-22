@@ -7,7 +7,6 @@ import Text from '../foundation/Text';
 export default function AboutMe() {
   return (
     <Box
-      id="home"
       minHeight="70vh"
       display="flex"
       flexDirection="column"
@@ -31,7 +30,7 @@ export default function AboutMe() {
               variant="paragraph1"
               marginTop={{
                 xs: '42px',
-                md: '100px',
+                md: '130px',
               }}
             >
               Graduada em Engenharia Química pela Universidade Federal da Paraíba (UFPB), esse ano me interessei pela área de tecnologia da informação visando transição de carreira comecei a estudar para a área de desenvolvimento web (com foco em: Front-End).
@@ -46,7 +45,7 @@ export default function AboutMe() {
           <Grid.Col
             value={{ xs: 12, md: 5 }}
             marginTop={{
-              xs: '42px',
+              xs: '70px',
               sm: '90px',
             }}
           >

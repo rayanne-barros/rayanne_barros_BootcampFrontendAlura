@@ -47,6 +47,7 @@ export default function Home() {
             xs: '42px',
             md: '0px',
           }}
+          marginBottom="20px"
         >
           Entre em contato
         </Text>
@@ -74,9 +75,6 @@ export default function Home() {
             setModalState(!isModalOpen);
           }}
         >
-          <Fab size="medium" color="primary" aria-label="add">
-            <AddIcon />
-          </Fab>
         </Button> */}
       </Box>
       <Footer />

@@ -6,7 +6,6 @@ import Text from '../foundation/Text';
 export default function Capa() {
   return (
     <Box
-      id="home"
       minHeight="70vh"
       display="flex"
       flexDirection="column"
@@ -30,7 +29,7 @@ export default function Capa() {
               variant="titleXS"
               marginTop={{
                 xs: '42px',
-                md: '0px',
+                md: '100px',
               }}
             >
               Oi, meu nome é:
@@ -45,8 +44,8 @@ export default function Capa() {
           <Grid.Col
             value={{ xs: 12, md: 5 }}
             marginTop={{
-              xs: '42px',
-              sm: 'initial',
+              xs: '70px',
+              sm: '90px',
             }}
           >
             <img
