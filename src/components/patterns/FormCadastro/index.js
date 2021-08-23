@@ -99,6 +99,7 @@ function FormContent({ setModalState }) {
           name="nome"
           value={userInfo.nome}
           onChange={handleChange}
+          type="text"
         />
       </div>
 
@@ -108,6 +109,7 @@ function FormContent({ setModalState }) {
           name="email"
           value={userInfo.email}
           onChange={handleChange}
+          type="email"
         />
       </div>
 
@@ -117,6 +119,7 @@ function FormContent({ setModalState }) {
           name="mensagem"
           value={userInfo.mensagem}
           onChange={handleChange}
+          type="text"
         />
       </div>
 
