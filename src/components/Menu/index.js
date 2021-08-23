@@ -11,7 +11,6 @@ export default function Menu() {
         <MenuWrapper.RightSide>
           <a href="/">Início</a>
           <a href="/sobre">Sobre </a>
-          <a href="#projetos">Projetos</a>
         </MenuWrapper.RightSide>
       </MenuWrapper.Global>
     </MenuWrapper>

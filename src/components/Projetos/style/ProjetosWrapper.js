@@ -24,6 +24,7 @@ ProjetosWrapper.Destaque = styled.a`
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #0862FF;
+    transition: ${({ theme }) => theme.transition};
     &:hover {
         box-shadow: 5px 5px 10px 5px #0542AB;
     }
@@ -71,6 +72,7 @@ ProjetosWrapper.Card = styled.a`
     justify-content: space-between;
     border: 1px solid #0862FF;
     width: 100%;
+    transition: ${({ theme }) => theme.transition};
 
     &:hover {
         box-shadow: 5px 5px 10px 5px #0542AB;
