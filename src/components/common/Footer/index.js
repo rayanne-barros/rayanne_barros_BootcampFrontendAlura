@@ -2,8 +2,9 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
-import { Box } from '../foundation/layout/Box';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import { Box } from '../../foundation/layout/Box';
+import Text from '../../foundation/Text';
 
 const FooterWrapper = styled.footer`
  width: 100%;
@@ -59,9 +60,15 @@ export default function Footer() {
       <FooterWrapper>
         {redesSociais.map((rede) => (
           <li key={rede.url}>
-            <a href={rede.url}>
+            <Text
+              tag="a"
+              variant="smallestException"
+              href={rede.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {rede.logo}
-            </a>
+            </Text>
           </li>
         ))}
       </FooterWrapper>

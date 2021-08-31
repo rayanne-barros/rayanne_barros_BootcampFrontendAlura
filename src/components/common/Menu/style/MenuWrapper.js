@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 // eslint-disable-next-line import/prefer-default-export
 export const MenuWrapper = styled.nav`
@@ -67,6 +67,7 @@ MenuWrapper.RightSide = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  list-style: none;
 
   ${breakpointsMedia({
     md: css`
@@ -77,15 +78,16 @@ MenuWrapper.RightSide = styled.div`
    
   a {
     text-align: center;
-    display: block;
-    text-decoration: none;
+    display: block; 
+    text-decoration: none; 
     color: ${({ theme }) => theme.colors.primaryFont};
     transition: 200ms ease-in-out;    
     &:hover,
     &:focus {
       font-weight: 700;
-      color: ${({ theme }) => theme.colors.primaryFont};
-      
+       color: ${({ theme }) => theme.colors.primaryFont};
+       
+      // color: #FFFFFF;
     }
   }
 `;
