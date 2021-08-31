@@ -3,7 +3,7 @@ import { Lottie } from '@crello/react-lottie';
 import loadingAnimation from './animations/loading.json';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
-import { Button } from '../../Button';
+import { Button } from '../../common/Button';
 import TextField from '../../Forms/TextField';
 import { Box } from '../../foundation/layout/Box';
 import Text from '../../foundation/Text';

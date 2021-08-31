@@ -2,13 +2,13 @@
 import React from 'react';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import Footer from '../src/components/Footer';
-import Menu from '../src/components/Menu';
+import Footer from '../src/components/common/Footer';
+import Menu from '../src/components/common/Menu';
 import Projetos from '../src/components/Projetos';
-import Capa from '../src/components/Capa';
+import Capa from '../src/components/common/Capa';
 import { Box } from '../src/components/foundation/layout/Box';
 import Text from '../src/components/foundation/Text';
-import Modal from '../src/components/Modal';
+import Modal from '../src/components/common/Modal';
 import FormCadastro from '../src/components/patterns/FormCadastro';
 
 export default function Home() {

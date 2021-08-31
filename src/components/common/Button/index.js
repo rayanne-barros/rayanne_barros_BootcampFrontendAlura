@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { TextStyleVariantsMap } from '../foundation/Text';
-import { propToStyle } from '../../theme/utils/propToStyle';
-import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
+import { TextStyleVariantsMap } from '../../foundation/Text';
+import { propToStyle } from '../../../theme/utils/propToStyle';
+import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const GhostButton = css`
   background: transparent;

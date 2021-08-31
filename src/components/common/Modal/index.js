@@ -14,7 +14,7 @@ left: 0;
 right: 0;
 bottom: 0;
 margin: auto;
-overflow: scroll;
+overflow: auto;
 transition:.3s;
 z-index:100;
   ${({ isOpen }) => {

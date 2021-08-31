@@ -1,9 +1,10 @@
+/* eslint-disable max-len */
 import React from 'react';
-import { Box } from '../foundation/layout/Box';
-import { Grid } from '../foundation/layout/Grid';
-import Text from '../foundation/Text';
+import { Box } from '../../foundation/layout/Box';
+import { Grid } from '../../foundation/layout/Grid';
+import Text from '../../foundation/Text';
 
-export default function Capa() {
+export default function AboutMe() {
   return (
     <Box
       minHeight="70vh"
@@ -25,20 +26,20 @@ export default function Capa() {
             }}
           >
             <Text
-              tag="h2"
-              variant="titleXS"
+              tag="p"
+              variant="paragraph1"
               marginTop={{
                 xs: '42px',
-                md: '100px',
+                md: '130px',
               }}
             >
-              Oi, meu nome é:
-            </Text>
-            <Text tag="h1" variant="title">
-              Rayanne Barros!
-            </Text>
-            <Text tag="p" variant="paragraph1" marginTop="2px">
-              Sou desenvolvedora front-end em formação.
+              Graduada em Engenharia Química pela Universidade Federal da Paraíba (UFPB), esse ano me interessei pela área de tecnologia da informação visando transição de carreira comecei a estudar para a área de desenvolvimento web (com foco em: Front-End).
+              {' '}
+              <br />
+              Possuo conhecimento em: HTML5, CSS3, JavaScript e Git/Github.
+              {' '}
+              <br />
+              Me especializando em: Next.js, React e styled-components.
             </Text>
           </Grid.Col>
           <Grid.Col
