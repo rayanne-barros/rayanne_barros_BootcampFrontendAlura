@@ -35,8 +35,6 @@ export default function Menu() {
                 tag="a"
                 variant="smallestException"
                 href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 {link.texto}
               </Text>

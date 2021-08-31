@@ -16,7 +16,7 @@ const formStates = {
 };
 
 // eslint-disable-next-line react/prop-types
-function FormContent({ setModalState }) {
+function FormContent() {
   const [isFormSubmited, setIsFormSubmited] = React.useState(false);
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
   const [userInfo, setUserInfo] = React.useState({
@@ -76,17 +76,6 @@ function FormContent({ setModalState }) {
           });
       }}
     >
-      <Button
-        ghost
-        onClick={() => { setModalState(false); }}
-        style={{
-          position: 'absolute',
-          top: '30px',
-          right: '30px',
-        }}
-      >
-        X
-      </Button>
       <Text
         variant="paragraph1"
         tag="h1"

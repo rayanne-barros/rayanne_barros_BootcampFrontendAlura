@@ -1,12 +1,14 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { TextStyleVariantsMap } from '../../foundation/Text';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
+import Link from '../Link';
 
 const GhostButton = css`
   background: transparent;
   color: ${({ theme }) => theme.colors.primaryFont};
-  // border: 1px solid ${({ theme }) => theme.dark.secondaryText};
 `;
 
 const DefaultButton = css`
@@ -14,8 +16,7 @@ const DefaultButton = css`
   color: ${({ theme }) => theme.colors.primaryFont};
 `;
 
-// eslint-disable-next-line import/prefer-default-export
-export const Button = styled.button`
+const ButtonWrapper = styled.button`
   display: flex;
   align-items: center;
   border: 0;
@@ -50,3 +51,28 @@ export const Button = styled.button`
     width: 100%;
     `};
 `;
+
+// eslint-disable-next-line import/prefer-default-export
+export function Button({ href, children, ...props }) {
+  const hasHref = Boolean(href);
+  const tag = hasHref ? Link : 'button';
+  return (
+    <ButtonWrapper
+      as={tag}
+      href={href}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    >
+      {children}
+    </ButtonWrapper>
+  );
+}
+
+Button.defaultProps = {
+  href: undefined,
+};
+
+Button.propTypes = {
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
