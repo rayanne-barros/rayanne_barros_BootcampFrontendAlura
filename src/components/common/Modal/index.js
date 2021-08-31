@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
+import { Button } from '../Button';
 
 const ModalWrapper = styled.div`
 display: flex;
@@ -36,6 +37,7 @@ const LockScroll = createGlobalStyle`
     overflow: hidden;
   }
 `;
+
 function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
@@ -70,6 +72,17 @@ function Modal({ isOpen, onClose, children }) {
         {children({
           'data-modal-safe-area': true,
         })}
+        <Button
+          ghost
+          style={{
+            position: 'absolute',
+            top: '30px',
+            right: '30px',
+          }}
+        >
+          X
+        </Button>
+
       </motion.div>
     </ModalWrapper>
   );
