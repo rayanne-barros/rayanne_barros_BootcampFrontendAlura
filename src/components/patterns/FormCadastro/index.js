@@ -148,17 +148,17 @@ function FormContent() {
         </Box>
       )}
       { isFormSubmited && submissionStatus === formStates.ERROR && (
-      <Box
-        display="flex"
-        justifyContent="center"
-      >
-        <Lottie
-          width="150px"
-          height="150px"
-          className="lottie-container basic"
-          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
-        />
-      </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+        >
+          <Lottie
+            width="150px"
+            height="150px"
+            className="lottie-container basic"
+            config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+          />
+        </Box>
       )}
     </form>
   );
