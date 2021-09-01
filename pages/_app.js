@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../src/theme';
 import { GlobalStyle } from '../src/theme/GlobalStyle';
+import { SEO } from '../src/components/common/SEO';
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
         <title> Meu Portfólio </title>
       </Head>
+      <SEO headTitle="Home" />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
