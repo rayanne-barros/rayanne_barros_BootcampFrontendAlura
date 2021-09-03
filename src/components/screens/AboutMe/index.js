@@ -3,11 +3,12 @@ import React from 'react';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
+// import { Image } from './style';
 
 export default function AboutMe() {
   return (
     <Box
-      minHeight="70vh"
+      minHeight="90vh"
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -17,8 +18,8 @@ export default function AboutMe() {
           <Grid.Col
             display="flex"
             flexDirection="column"
+            justifyContent="space-between"
             alignItems="flex-start"
-            justifyContent="center"
             value={{ xs: 12, md: 6 }}
             marginBottom={{
               xs: '42px',
@@ -33,13 +34,13 @@ export default function AboutMe() {
                 md: '130px',
               }}
             >
-              Graduada em Engenharia Química pela Universidade Federal da Paraíba (UFPB), esse ano me interessei pela área de tecnologia da informação visando transição de carreira comecei a estudar para a área de desenvolvimento web (com foco em: Front-End).
+              Graduada em Engenharia Química, atualmente em transição de carreira para a área de desenvolvimento web (com foco em: Front-End).
               {' '}
               <br />
-              Possuo conhecimento em: HTML5, CSS3, JavaScript e Git/Github.
+              Aluna do Bootcamp de Front-End Avançado da Alura.
               {' '}
               <br />
-              Me especializando em: Next.js, React e styled-components.
+              Buscando minha primeira oportunidade no mercado de trabalho.
             </Text>
           </Grid.Col>
           <Grid.Col
@@ -51,9 +52,12 @@ export default function AboutMe() {
           >
             <img
               style={{ display: 'block', margin: 'auto', maxWidth: '80%' }}
-              src="./images/img_me.png"
+              src="/images/img_me.png"
               alt="Minha foto"
             />
+            {/* <Image>
+              <img src="https://avatars.githubusercontent.com/u/81394995?v=4" alt="Minha foto do github" />
+            </Image> */}
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>

@@ -1,23 +1,19 @@
-/* eslint-disable react/self-closing-comp */
 import React from 'react';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import Capa from '../src/components/common/Capa';
-import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
-import { WebsitePageContext } from '../src/components/wrappers/WebsitePage';
-import { Box } from '../src/components/foundation/layout/Box';
-import Text from '../src/components/foundation/Text';
+import { Box } from '../../foundation/layout/Box';
+import Text from '../../foundation/Text';
+import { WebsitePageContext } from '../../wrappers/WebsitePage';
 
-function HomeScreen() {
+export default function Contato() {
   const websitePageContext = React.useContext(WebsitePageContext);
   return (
     <>
-      <Capa />
       <Box
-        minHeight="20vh"
+        minHeight="30vh"
         marginTop={{
-          xs: '0',
-          md: '0',
+          xs: '40px',
+          md: '80px',
         }}
         textAlign="center"
       >
@@ -29,7 +25,7 @@ function HomeScreen() {
             xs: '42px',
             md: '0px',
           }}
-          marginBottom="0px"
+          marginBottom="20px"
         >
           Entre em contato
         </Text>
@@ -47,11 +43,3 @@ function HomeScreen() {
     </>
   );
 }
-
-export default websitePageHOC(HomeScreen, {
-  pageWrapperProps: {
-    seoProps: {
-      headTitle: 'Home',
-    },
-  },
-});
