@@ -18,6 +18,7 @@ export const Box = styled.div`
   ${propToStyle('textAlign')} 
   ${propToStyle('backgroundColor')} 
   ${propToStyle('boxShadow')} 
+  ${propToStyle('position')}
 
 
 `;

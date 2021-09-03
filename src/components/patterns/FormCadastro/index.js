@@ -25,13 +25,24 @@ function FormContent() {
     mensagem: '',
   });
 
-  function handleChange(event) {
-    const fieldName = event.target.getAttribute('name');
-    setUserInfo({
-      ...userInfo,
-      [fieldName]: event.target.value,
-    });
-  }
+  // const handleChange = React.useCallback((event) => {
+  //   const fieldName = event.target.getAttribute('name');
+  //   setUserInfo({
+  //     ...userInfo,
+  //     [fieldName]: event.target.value,
+  //   });
+  // }, [setUserInfo]);
+
+  const handleChange = React.useCallback(
+    (event) => {
+      const { name, value } = event.target;
+      setUserInfo((state) => ({
+        ...state,
+        [name]: value,
+      }));
+    },
+    [userInfo],
+  );
 
   const isFormInvalid = userInfo.nome.length === 0
   || userInfo.email.length === 0

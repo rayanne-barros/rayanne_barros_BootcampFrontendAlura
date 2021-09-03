@@ -13,10 +13,3 @@ export const theme = {
   breakpoints,
   fontFamily: '\'Fira Sans Condensed\', sans-serif',
 };
-
-// export default {
-//   // theme,
-//   typographyVariants,
-//   breakpoints,
-//   fontFamily: '\'Fira Sans Condensed\', sans-serif',
-// };

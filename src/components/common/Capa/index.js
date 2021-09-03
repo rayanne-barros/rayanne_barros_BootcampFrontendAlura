@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '../../foundation/layout/Box';
 import { Grid } from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
+// import { Image } from './style';
 
 export default function Capa() {
   return (
@@ -38,7 +39,7 @@ export default function Capa() {
               Rayanne Barros!
             </Text>
             <Text tag="p" variant="paragraph1" marginTop="2px">
-              Sou desenvolvedora front-end em formação.
+              Sou desenvolvedora front-end.
             </Text>
           </Grid.Col>
           <Grid.Col
@@ -53,6 +54,9 @@ export default function Capa() {
               src="./images/img_me.png"
               alt="Minha foto"
             />
+            {/* <Image>
+              <img src="https://avatars.githubusercontent.com/u/81394995?v=4" alt="Minha foto do github" />
+            </Image> */}
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>

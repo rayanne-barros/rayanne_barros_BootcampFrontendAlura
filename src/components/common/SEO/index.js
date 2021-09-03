@@ -13,6 +13,7 @@ export function SEO({ headTitle }) {
   const urlBase = 'https://portfolio-rayanne-barros.vercel.app/';
   return (
     <Head>
+      <title> Meu Portfólio </title>
       <title>{title}</title>
       {/* <!-- Primary Meta Tags --> */}
       <meta name="title" content={title} />
