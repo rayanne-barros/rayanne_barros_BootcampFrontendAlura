@@ -14,7 +14,7 @@ function HomeScreen() {
     <>
       <Capa />
       <Box
-        minHeight="20vh"
+        minHeight="30vh"
         marginTop={{
           xs: '0',
           md: '0',
