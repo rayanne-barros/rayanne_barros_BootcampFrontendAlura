@@ -19,6 +19,6 @@ export const Box = styled.div`
   ${propToStyle('backgroundColor')} 
   ${propToStyle('boxShadow')} 
   ${propToStyle('position')}
-
-
+  ${propToStyle('bottom')} 
+  ${propToStyle('left')}   
 `;

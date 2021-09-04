@@ -8,7 +8,7 @@ import Text from '../../foundation/Text';
 export default function AboutMe() {
   return (
     <Box
-      minHeight="90vh"
+      minHeight="70vh"
       display="flex"
       flexDirection="column"
       alignItems="center"

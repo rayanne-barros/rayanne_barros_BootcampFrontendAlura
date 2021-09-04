@@ -54,10 +54,12 @@ export default function Footer() {
     <Box
       marginTop={{
         xs: '30px',
-        md: '6px',
+        md: '8px',
       }}
       display="flex"
       position="sticky"
+      // bottom="0"
+      // left="0"
     >
       <FooterWrapper>
         {redesSociais.map((rede) => (
