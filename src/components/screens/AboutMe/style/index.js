@@ -38,10 +38,6 @@ ${breakpointsMedia({
    margin-right: auto;
   `,
   })}
-/* display:flex;
-flex-flow: column wrap;
-flex-direction: column;
-text-align: center; */
 ul{
     margin:0;
 }

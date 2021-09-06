@@ -10,10 +10,11 @@ const InputWrapper = styled.div`
 const Input = styled(Text)`
   width: 100%;
   border: none;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primaryFont};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
   padding: 12px 0;
   outline: 0; 
   background-color: ${({ theme }) => theme.colors.secondary};
+  border-radius: ${({ theme }) => theme.borderRadius};
 `;
 
 Input.defaultProps = {

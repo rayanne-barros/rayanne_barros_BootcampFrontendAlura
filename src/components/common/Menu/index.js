@@ -15,10 +15,10 @@ const links = [
     texto: 'Projetos',
     url: '/projeto',
   },
-  // {
-  //   texto: 'Contato',
-  //   url: '/contato',
-  // },
+  {
+    texto: 'Contato',
+    url: '/contato',
+  },
 ];
 
 export default function Menu() {

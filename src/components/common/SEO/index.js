@@ -9,7 +9,7 @@ export function SEO({ headTitle }) {
   const hasTitle = Boolean(headTitle);
   const title = hasTitle ? (`${headTitle} | ${pageTitleDefault}`) : pageTitleDefault;
   const description = 'Projeto criado utilizando Next.js, React e styled-components.';
-  const image = '';
+  const image = 'https://i.postimg.cc/PJNXnBRK/portfolio.png';
   const urlBase = 'https://portfolio-rayanne-barros.vercel.app/';
   return (
     <Head>
