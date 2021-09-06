@@ -12,4 +12,4 @@ Primeiramente é necessário ter o node.js instalado, clone o projeto com `git c
 <br>
 
 ## Deploy do projeto:
-<a href="https://portfolio-rayanne-barros.vercel.app/" target="_blank" rel="noopener noreferrer" title="Portfólio"> Acesse o projeto</a>
+<a href="https://portfolio-rayanne-barros.vercel.app/" target="_blank" rel="noopener noreferrer" title="Portfólio"><img src="https://i.postimg.cc/PJNXnBRK/portfolio.png" alt="Pagina inicial do Portfólio" width="800" height=""/></a>
