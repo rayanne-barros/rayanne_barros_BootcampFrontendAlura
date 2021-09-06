@@ -28,13 +28,13 @@ const meusProjetos = [
 export default function Projetos() {
   return (
     <Box
-      minHeight="100vh"
+      minHeight="90vh"
       marginTop={{
-        xs: '100px',
-        md: '150px',
+        xs: '120px',
+        md: '170px',
       }}
     >
-      <Text id="projetos" tag="h2" variant="title" textAlign="center" marginBottom="30px"> Meus Projetos     </Text>
+      <Text id="projetos" tag="h2" variant="title" textAlign="center" marginBottom="50px"> Projetos Selecionados </Text>
       <ProjetosWrapper>
         <ProjetosWrapper.Card>
           {meusProjetos.map((item) => (

@@ -10,7 +10,6 @@ export const ProjetosWrapper = styled.div`
        min-height: 100vh;
        margin-left: auto;
        margin-right: auto;
-       margin-bottom: 25px;
        `,
   })}       
   
