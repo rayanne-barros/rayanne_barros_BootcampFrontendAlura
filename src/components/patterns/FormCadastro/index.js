@@ -116,7 +116,7 @@ function FormContent() {
       <div>
         <TextField
           placeholder="Deixe sua mensagem!"
-          name="mensagem"
+          name="message"
           value={userInfo.mensagem}
           onChange={handleChange}
           type="text"
