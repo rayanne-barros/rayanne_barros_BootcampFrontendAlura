@@ -1,0 +1,25 @@
+{
+    "projetos": [
+      {
+        "image": "https://i.postimg.cc/PJgNjw7C/projeto-atual.png",
+        "title": "Instalura",
+        "description": "É uma versão do Instagram, desenvolvido durante o Bootcamp de Front-End Avançado da Alura.",
+        "link": "https://github.com/rayanne-barros/instalura-base",
+        "slug": "instalura"
+      },
+      {
+        "image": "https://i.postimg.cc/5NqgW7JT/alurakut.png",
+        "title": "Alurakut",
+        "description": "Desenvolvido durante a Imersão React, para matar a saudades do velho e bom Orkut.",
+        "link": "https://github.com/rayanne-barros/Imersao_React",
+        "slug": "alurakut"
+      },
+      {
+        "image": "https://i.postimg.cc/4xPWV8FV/challenge-alura.png",
+        "title": "Alura Dev",
+        "description": "Alura Dev é um editor de código que te permite salvar o projeto (códigos) na aba comunidade.",
+        "link": "https://github.com/rayanne-barros/Challenge_alura_frontend",
+        "slug": "aluradev"
+      }
+    ]
+  }

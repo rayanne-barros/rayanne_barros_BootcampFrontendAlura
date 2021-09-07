@@ -3,27 +3,7 @@ import React from 'react';
 import { Box } from '../../foundation/layout/Box';
 import Text from '../../foundation/Text';
 import { ProjetosWrapper } from './style/ProjetosWrapper';
-
-const meusProjetos = [
-  {
-    title: 'Instalura',
-    url: 'https://github.com/rayanne-barros/instalura-base',
-    src: '/images/projeto-base.png',
-    description: ' É uma versão do Instagram, desenvolvido durante o Bootcamp de Front-End Avançado da Alura.',
-  },
-  {
-    title: 'Alurakut',
-    url: 'https://github.com/rayanne-barros/Imersao_React',
-    src: '/images/alurakut.png',
-    description: 'Para matar a saudades do velho e bom Orkut',
-  },
-  {
-    title: 'Alura Dev',
-    url: 'https://github.com/rayanne-barros/Challenge_alura_frontend',
-    src: '/images/challenge_alura.png',
-    description: 'Alura Dev é um editor de código que te permite salvar o projeto (códigos) na aba comunidade.',
-  },
-];
+import projetos from '../PageProjetos/projetos.json';
 
 export default function Projetos() {
   return (
@@ -31,27 +11,21 @@ export default function Projetos() {
       minHeight="90vh"
       marginTop={{
         xs: '120px',
-        md: '170px',
+        md: '150px',
       }}
     >
-      <Text id="projetos" tag="h2" variant="title" textAlign="center" marginBottom="50px"> Projetos Selecionados </Text>
+      <Text tag="h2" variant="title" textAlign="center" marginBottom="50px"> Projetos Selecionados </Text>
       <ProjetosWrapper>
         <ProjetosWrapper.Card>
-          {meusProjetos.map((item) => (
-            <li key={item.title}>
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Site Live"
-                className="itemsProjetos"
-              >
+          {projetos.projetos.map((item) => (
+            <li key={item.link}>
+              <a href={`/projeto/${item.slug}`}>
                 <Box
                   display="flex"
                   flexDirection="column"
                 >
                   <img
-                    src={item.src}
+                    src={item.image}
                     alt={item.title}
                     loading="lazy"
                     className="img"
@@ -63,9 +37,9 @@ export default function Projetos() {
                   >
                     {item.title}
                   </Text>
-                  <Text tag="p" variant="paragraph1" className="description">
+                  {/* <Text tag="p" variant="paragraph1" className="description">
                     {item.description}
-                  </Text>
+                  </Text> */}
                 </Box>
               </a>
             </li>
