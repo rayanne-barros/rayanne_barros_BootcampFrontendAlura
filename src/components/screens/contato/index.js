@@ -10,10 +10,10 @@ export default function Contato() {
   return (
     <>
       <Box
-        minHeight="85vh"
+        minHeight="80vh"
         marginTop={{
           xs: '40px',
-          md: '70px',
+          md: '90px',
         }}
         textAlign="center"
       >

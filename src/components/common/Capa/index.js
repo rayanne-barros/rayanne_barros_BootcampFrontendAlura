@@ -7,7 +7,7 @@ import Text from '../../foundation/Text';
 export default function Capa() {
   return (
     <Box
-      minHeight="93vh"
+      minHeight="92vh"
       display="flex"
       flexDirection="column"
       alignItems="center"
