@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+        <link rel="shortcut icon" href="https://github.com/rayanne-barros.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

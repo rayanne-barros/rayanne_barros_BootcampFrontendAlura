@@ -7,7 +7,7 @@ export const ProjetosWrapper = styled.div`
     ${breakpointsMedia({
     md: css`
        width: 100%;
-       min-height: 100vh;
+       min-height: 70vh;
        margin-left: auto;
        margin-right: auto;
        `,
@@ -61,17 +61,3 @@ ProjetosWrapper.Card = styled.ul`
   })}
  }
 `;
-
-// ProjetosWrapper.Text = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     padding: 10px;
-//     .description {
-//         display: none;
-//     ${breakpointsMedia({
-//     md: css`
-//          display: initial;
-//         `,
-//   })}
-//     }
-// `;
