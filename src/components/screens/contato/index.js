@@ -36,6 +36,7 @@ export default function Contato() {
           onClick={() => {
             websitePageContext.toggleModalCadastro();
           }}
+          id="button"
         >
           <AddIcon />
         </Fab>

@@ -1,4 +1,8 @@
+/* eslint-disable react/jsx-no-bind */
 import React from 'react';
+import PropTypes from 'prop-types';
+import * as yup from 'yup';
+import styled from 'styled-components';
 import { Lottie } from '@crello/react-lottie';
 import loadingAnimation from './animations/loading.json';
 import successAnimation from './animations/success.json';
@@ -7,6 +11,22 @@ import { Button } from '../../common/Button';
 import TextField from '../../Forms/TextField';
 import { Box } from '../../foundation/layout/Box';
 import Text from '../../foundation/Text';
+import { useForm } from '../../../infra/hooks/forms/useForm';
+import contactService from '../../../services/contact/contactService';
+
+const CloseButton = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  button {
+    height: 38px;
+    width: 38px;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px;
+  }
+`;
 
 const formStates = {
   DEFAULT: 'DEFAULT',
@@ -15,91 +35,89 @@ const formStates = {
   ERROR: 'ERROR',
 };
 
+const contactSchema = yup.object().shape({
+  name: yup
+    .string()
+    .required('Nome é obrigatório')
+    .min(3, 'Preencha ao menos 3 caracteres'),
+  email: yup
+    .string()
+    .email('Email precisa ser válido')
+    .required('Email é obrigatório')
+    .min(10, 'Preencha ao menos 10 caracteres'),
+  message: yup
+    .string()
+    .required('Mensagem é obrigatória')
+    .min(3, 'Preencha ao menos 3 caracteres'),
+});
+
 // eslint-disable-next-line react/prop-types
-function FormContent() {
-  const [isFormSubmited, setIsFormSubmited] = React.useState(false);
+function FormContent({ onSubmit, setModalState }) {
+//  const [isFormSubmited, setIsFormSubmited] = React.useState(false);
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
-  const [userInfo, setUserInfo] = React.useState({
+  const initialValues = {
     nome: '',
     email: '',
     mensagem: '',
-  });
+  };
 
-  // const handleChange = React.useCallback((event) => {
-  //   const fieldName = event.target.getAttribute('name');
-  //   setUserInfo({
-  //     ...userInfo,
-  //     [fieldName]: event.target.value,
-  //   });
-  // }, [setUserInfo]);
-
-  const handleChange = React.useCallback(
-    (event) => {
-      const { name, value } = event.target;
-      setUserInfo((state) => ({
-        ...state,
-        [name]: value,
-      }));
+  const form = useForm({
+    initialValues,
+    onSubmit: (values) => {
+      form.setIsFormDisabled(true);
+      setSubmissionStatus(formStates.LOADING);
+      contactService.contact({
+        name: values.nome,
+        email: values.email,
+        message: values.mensagem,
+      })
+        .then(() => {
+          setSubmissionStatus(formStates.DONE);
+        })
+        .catch(() => {
+          setSubmissionStatus(formStates.ERROR);
+        })
+        .finally(() => {
+          form.setIsFormDisabled(false);
+        });
     },
-    [userInfo],
-  );
-
-  const isFormInvalid = userInfo.nome.length === 0
-  || userInfo.email.length === 0
-  || userInfo.mensagem.length === 0;
+    async validateSchema(values) {
+      return contactSchema.validate(values, {
+        abortEarly: false,
+      });
+    },
+  });
 
   return (
     <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        setIsFormSubmited(true);
-        setSubmissionStatus(formStates.LOADING);
-
-        const userDTO = {
-          name: userInfo.nome,
-          email: userInfo.email,
-          message: userInfo.mensagem,
-        };
-
-        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userDTO),
-        })
-          .then((respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-              return respostaDoServidor.json();
-            }
-
-            throw new Error('Não foi possível enviar a mensagem');
-          })
-          .then((respostaConvertidaEmObjeto) => {
-            setSubmissionStatus(formStates.DONE);
-            // eslint-disable-next-line no-console
-            console.log(respostaConvertidaEmObjeto);
-          })
-          .catch((error) => {
-            setSubmissionStatus(formStates.ERROR);
-            // eslint-disable-next-line no-console
-            console.error(error);
-          });
-      }}
+      id="formCadastro"
+      onSubmit={onSubmit || form.handleSubmit}
     >
+      <CloseButton>
+        <Button
+          type="button"
+          onClick={() => setModalState(false)}
+        >
+          X
+        </Button>
+      </CloseButton>
       <Text
         variant="paragraph1"
         tag="h1"
+        color="primaryFont"
       >
         Deixe sua mensagem!
       </Text>
       <div>
         <TextField
           placeholder="Nome"
-          name="nome"
-          value={userInfo.nome}
-          onChange={handleChange}
+          name="name"
           type="text"
+          value={form.values.name}
+          onChange={form.handleChange}
+          error={form.errors.name}
+          isTouched={form.touched.name}
+          onBlur={form.handleBlur}
         />
       </div>
 
@@ -107,9 +125,12 @@ function FormContent() {
         <TextField
           placeholder="email@dominio.com"
           name="email"
-          value={userInfo.email}
-          onChange={handleChange}
           type="email"
+          value={form.values.email}
+          onChange={form.handleChange}
+          error={form.errors.email}
+          isTouched={form.touched.email}
+          onBlur={form.handleBlur}
         />
       </div>
 
@@ -117,22 +138,25 @@ function FormContent() {
         <TextField
           placeholder="Deixe sua mensagem!"
           name="message"
-          value={userInfo.mensagem}
-          onChange={handleChange}
           type="text"
+          value={form.values.message}
+          onChange={form.handleChange}
+          error={form.errors.message}
+          isTouched={form.touched.message}
+          onBlur={form.handleBlur}
         />
       </div>
 
       <Button
         variant="primary"
         type="submit"
-        disabled={isFormInvalid}
+        disabled={form.isFormDisabled}
         fullWidth
       >
         Enviar mensagem
       </Button>
 
-      { isFormSubmited && submissionStatus === formStates.LOADING && (
+      { form.isFormSubmited && submissionStatus === formStates.LOADING && (
         <Box
           display="flex"
           justifyContent="center"
@@ -145,7 +169,7 @@ function FormContent() {
           />
         </Box>
       )}
-      {isFormSubmited && submissionStatus === formStates.DONE && (
+      { form.isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
           display="flex"
           justifyContent="center"
@@ -153,12 +177,12 @@ function FormContent() {
           <Lottie
             width="150px"
             height="150px"
-            className="lottie-container basic"
+            className="lottie-container basic ok"
             config={{ animationData: successAnimation, loop: false, autoplay: true }}
           />
         </Box>
       )}
-      { isFormSubmited && submissionStatus === formStates.ERROR && (
+      { form.isFormSubmited && submissionStatus === formStates.ERROR && (
         <Box
           display="flex"
           justifyContent="center"
@@ -174,6 +198,14 @@ function FormContent() {
     </form>
   );
 }
+
+FormContent.defaultProps = {
+  onSubmit: undefined,
+};
+
+FormContent.propTypes = {
+  onSubmit: PropTypes.func,
+};
 
 // eslint-disable-next-line react/prop-types
 export default function FormCadastro({ propsDoModal, setModalState }) {

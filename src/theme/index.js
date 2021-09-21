@@ -8,6 +8,7 @@ export const theme = {
     secondary: '#000000',
     primaryFont: '#FFFFFF',
     secondaryFont: '#DBCD91',
+    error: '#dc3545',
   },
   typographyVariants,
   breakpoints,
