@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle, css } from 'styled-components';
 import { motion } from 'framer-motion';
-import { Button } from '../Button';
+// import { Button } from '../Button';
 
 const ModalWrapper = styled.div`
 display: flex;
@@ -72,7 +72,7 @@ function Modal({ isOpen, onClose, children }) {
         {children({
           'data-modal-safe-area': true,
         })}
-        <Button
+        {/* <Button
           ghost
           style={{
             position: 'absolute',
@@ -81,7 +81,7 @@ function Modal({ isOpen, onClose, children }) {
           }}
         >
           X
-        </Button>
+        </Button> */}
 
       </motion.div>
     </ModalWrapper>
