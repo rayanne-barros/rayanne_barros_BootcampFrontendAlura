@@ -8,7 +8,7 @@ import projetos from '../PageProjetos/projetos.json';
 export default function Projetos() {
   return (
     <Box
-      minHeight="80vh"
+      minHeight="70vh"
       marginTop={{
         xs: '120px',
         md: '150px',

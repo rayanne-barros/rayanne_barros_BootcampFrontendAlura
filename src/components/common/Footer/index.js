@@ -57,9 +57,7 @@ export default function Footer() {
         md: '8px',
       }}
       display="flex"
-      position="sticky"
-      // bottom="0"
-      // left="0"
+      // position="sticky"
     >
       <FooterWrapper>
         {redesSociais.map((rede) => (
