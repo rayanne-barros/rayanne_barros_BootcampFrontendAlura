@@ -9,6 +9,7 @@ export const theme = {
     primaryFont: '#FFFFFF',
     secondaryFont: '#DBCD91',
     error: '#dc3545',
+    success: '#28a745',
   },
   typographyVariants,
   breakpoints,

@@ -38,17 +38,16 @@ const formStates = {
 const contactSchema = yup.object().shape({
   name: yup
     .string()
-    .required('Nome é obrigatório')
+    .required('"Nome" é obrigatório')
     .min(3, 'Preencha ao menos 3 caracteres'),
   email: yup
     .string()
     .email('Email precisa ser válido')
-    .required('Email é obrigatório')
-    .min(10, 'Preencha ao menos 10 caracteres'),
+    .required('"Email" é obrigatório'),
   message: yup
     .string()
-    .required('Mensagem é obrigatória')
-    .min(3, 'Preencha ao menos 3 caracteres'),
+    .required('"Mensagem" é obrigatória')
+    .min(4, 'Preencha ao menos 4 caracteres'),
 });
 
 // eslint-disable-next-line react/prop-types
@@ -108,45 +107,36 @@ function FormContent({ onSubmit, setModalState }) {
       >
         Deixe sua mensagem!
       </Text>
-      <div>
-        <TextField
-          placeholder="Nome"
-          name="name"
-          type="text"
-          value={form.values.name}
-          onChange={form.handleChange}
-          error={form.errors.name}
-          isTouched={form.touched.name}
-          onBlur={form.handleBlur}
-        />
-      </div>
-
-      <div>
-        <TextField
-          placeholder="email@dominio.com"
-          name="email"
-          type="email"
-          value={form.values.email}
-          onChange={form.handleChange}
-          error={form.errors.email}
-          isTouched={form.touched.email}
-          onBlur={form.handleBlur}
-        />
-      </div>
-
-      <div>
-        <TextField
-          placeholder="Deixe sua mensagem!"
-          name="message"
-          type="text"
-          value={form.values.message}
-          onChange={form.handleChange}
-          error={form.errors.message}
-          isTouched={form.touched.message}
-          onBlur={form.handleBlur}
-        />
-      </div>
-
+      <TextField
+        placeholder="Nome"
+        name="name"
+        type="text"
+        value={form.values.name}
+        onChange={form.handleChange}
+        error={form.errors.name}
+        isTouched={form.touched.name}
+        onBlur={form.handleBlur}
+      />
+      <TextField
+        placeholder="email@dominio.com"
+        name="email"
+        type="email"
+        value={form.values.email}
+        onChange={form.handleChange}
+        error={form.errors.email}
+        isTouched={form.touched.email}
+        onBlur={form.handleBlur}
+      />
+      <TextField
+        placeholder="Deixe sua mensagem!"
+        name="message"
+        type="text"
+        value={form.values.message}
+        onChange={form.handleChange}
+        error={form.errors.message}
+        isTouched={form.touched.message}
+        onBlur={form.handleBlur}
+      />
       <Button
         variant="primary"
         type="submit"
