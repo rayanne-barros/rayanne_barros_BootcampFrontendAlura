@@ -3,14 +3,14 @@
       {
         "image": "https://i.postimg.cc/PJgNjw7C/projeto-atual.png",
         "title": "Instalura",
-        "description": "É uma versão do Instagram, desenvolvido durante o Bootcamp de Front-End Avançado da Alura.",
+        "description": "É uma versão do Instagram, desenvolvido durante o Bootcamp de Front-End Avançado da Alura. O instalura foi desenvolvido com Nextjs, React, styled components, testado com: Cypress e Jest.",
         "link": "https://github.com/rayanne-barros/instalura-base",
         "slug": "instalura"
       },
       {
         "image": "https://i.postimg.cc/5NqgW7JT/alurakut.png",
         "title": "Alurakut",
-        "description": "Desenvolvido durante a Imersão React, para matar a saudades do velho e bom Orkut.",
+        "description": "Desenvolvido durante a Imersão React, para matar a saudades do velho e bom Orkut. Meu primeiro contato com o React foi com esse projeto, por isso tenho um carinho especial.",
         "link": "https://github.com/rayanne-barros/Imersao_React",
         "slug": "alurakut"
       },
