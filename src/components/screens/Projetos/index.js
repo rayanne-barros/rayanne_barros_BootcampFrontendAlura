@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Box } from '../../foundation/layout/Box';
 import Text from '../../foundation/Text';
 import { ProjetosWrapper } from './style/ProjetosWrapper';
-import projetos from '../PageProjetos/projetos.json';
 
-export default function Projetos() {
+export { getContent } from './getContent';
+
+export default function Projetos({ projects }) {
   return (
     <Box
       minHeight="80vh"
@@ -17,7 +19,7 @@ export default function Projetos() {
       <Text tag="h2" variant="title" textAlign="center" marginBottom="50px"> Projetos Selecionados </Text>
       <ProjetosWrapper>
         <ProjetosWrapper.Card>
-          {projetos.projetos.map((item) => (
+          {projects.allPageProjects.map((item) => (
             <li key={item.link}>
               <a href={`/projeto/${item.slug}`}>
                 <Box
@@ -49,3 +51,8 @@ export default function Projetos() {
     </Box>
   );
 }
+
+Projetos.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  projects: PropTypes.object.isRequired,
+};
